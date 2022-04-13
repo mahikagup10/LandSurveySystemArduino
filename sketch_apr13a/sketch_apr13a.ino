@@ -16,6 +16,7 @@ void setup() {
   pinMode(trigPin, OUTPUT);
   pinMode(echoPin, INPUT);
   Serial.begin(9600);
+  pinMode(ledPin, OUTPUT);
 }
 
 void loop() {
@@ -30,7 +31,7 @@ void loop() {
   Serial.print("Distance: ");
     Serial.println(distance);
 
-  if(distance < 100) {
+  if(distance < 30) {
     digitalWrite(ledPin, HIGH);
   }
   else {
